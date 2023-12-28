@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Score;
 use Illuminate\Http\Request;
 use App\Exports\ScoresExport;
+use App\Imports\ScoresImport;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use MathPHP\Probability\Distribution\Continuous;
