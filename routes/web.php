@@ -29,4 +29,13 @@ Route::resource('/tabeldeskripsidatas', \App\Http\Controllers\Deskripsidatacontr
 Route::resource('/databergolong', \App\Http\Controllers\DatabergolongController::class);
 
 
-Route::get('/liliefors', [ScoreController::class, 'liliefors'])->name('liliefors'); #silahkan di sesuaikan
+Route::get('/liliefors', [ScoreController::class, 'liliefors'])->name('liliefors'); 
+
+Route::get('export/', [ScoreController::class, 'export']); #disesuaikan
+
+
+Route::get('import/', function () {
+    return view('dashboard.import');
+   });
+   
+   Route::post('import/', [ScoreController::class, 'import'])->name('import');
